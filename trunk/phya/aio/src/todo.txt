@@ -1,0 +1,10 @@
+
+CAIOoutStream
+
+Expand AIOoutStream to handle multiple objects going to different outputs.
+
+
+AIOwaveFile
+
+Make into a class with proper destructor management.
+
