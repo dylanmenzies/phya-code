@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC8958A90EE30A0200C2FAB4 /* paBody.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89586F0EE30A0200C2FAB4 /* paBody.hpp */; };
+		FC8958AA0EE30A0200C2FAB4 /* paContact.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958710EE30A0200C2FAB4 /* paContact.hpp */; };
+		FC8958AB0EE30A0200C2FAB4 /* paContactDynamicDataAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8958720EE30A0200C2FAB4 /* paContactDynamicDataAPI.h */; };
+		FC8958AC0EE30A0200C2FAB4 /* paContactGen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958730EE30A0200C2FAB4 /* paContactGen.hpp */; };
+		FC8958AD0EE30A0200C2FAB4 /* paFunContactGen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958740EE30A0200C2FAB4 /* paFunContactGen.hpp */; };
+		FC8958AE0EE30A0200C2FAB4 /* paFunImpactGen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958770EE30A0200C2FAB4 /* paFunImpactGen.hpp */; };
+		FC8958AF0EE30A0200C2FAB4 /* paImpact.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958780EE30A0200C2FAB4 /* paImpact.hpp */; };
+		FC8958B00EE30A0200C2FAB4 /* paImpactDynamicDataAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8958790EE30A0200C2FAB4 /* paImpactDynamicDataAPI.h */; };
+		FC8958B10EE30A0200C2FAB4 /* paImpactGen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89587A0EE30A0200C2FAB4 /* paImpactGen.hpp */; };
+		FC8958B20EE30A0200C2FAB4 /* Phya.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89587B0EE30A0200C2FAB4 /* Phya.hpp */; };
+		FC8958B30EE30A0200C2FAB4 /* paModal.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89587E0EE30A0200C2FAB4 /* paModal.hpp */; };
+		FC8958B40EE30A0200C2FAB4 /* paModalData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89587F0EE30A0200C2FAB4 /* paModalData.hpp */; };
+		FC8958B50EE30A0200C2FAB4 /* paModalRes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958800EE30A0200C2FAB4 /* paModalRes.hpp */; };
+		FC8958B60EE30A0200C2FAB4 /* paModalVars.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958810EE30A0200C2FAB4 /* paModalVars.hpp */; };
+		FC8958B70EE30A0200C2FAB4 /* paRes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958820EE30A0200C2FAB4 /* paRes.hpp */; };
+		FC8958B80EE30A0200C2FAB4 /* paAudio.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958840EE30A0200C2FAB4 /* paAudio.hpp */; };
+		FC8958B90EE30A0200C2FAB4 /* paFlags.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958850EE30A0200C2FAB4 /* paFlags.hpp */; };
+		FC8958BA0EE30A0200C2FAB4 /* paLockCheck.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958860EE30A0200C2FAB4 /* paLockCheck.hpp */; };
+		FC8958BB0EE30A0200C2FAB4 /* paSceneAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8958870EE30A0200C2FAB4 /* paSceneAPI.h */; };
+		FC8958BC0EE30A0200C2FAB4 /* paTick.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958880EE30A0200C2FAB4 /* paTick.hpp */; };
+		FC8958BD0EE30A0200C2FAB4 /* paBlock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89588A0EE30A0200C2FAB4 /* paBlock.hpp */; };
+		FC8958BE0EE30A0200C2FAB4 /* paLimiter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89588B0EE30A0200C2FAB4 /* paLimiter.hpp */; };
+		FC8958BF0EE30A0200C2FAB4 /* paLowpass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89588C0EE30A0200C2FAB4 /* paLowpass.hpp */; };
+		FC8958C00EE30A0200C2FAB4 /* paMeasureGain.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89588D0EE30A0200C2FAB4 /* paMeasureGain.hpp */; };
+		FC8958C10EE30A0200C2FAB4 /* paTriPulser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89588E0EE30A0200C2FAB4 /* paTriPulser.hpp */; };
+		FC8958C20EE30A0200C2FAB4 /* paFun.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958900EE30A0200C2FAB4 /* paFun.hpp */; };
+		FC8958C30EE30A0200C2FAB4 /* paFunSurface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958910EE30A0200C2FAB4 /* paFunSurface.hpp */; };
+		FC8958C40EE30A0200C2FAB4 /* paGridFun.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958920EE30A0200C2FAB4 /* paGridFun.hpp */; };
+		FC8958C50EE30A0200C2FAB4 /* paRndFun.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958930EE30A0200C2FAB4 /* paRndFun.hpp */; };
+		FC8958C60EE30A0200C2FAB4 /* paSurface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958940EE30A0200C2FAB4 /* paSurface.hpp */; };
+		FC8958C70EE30A0200C2FAB4 /* paUserFun.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958950EE30A0200C2FAB4 /* paUserFun.hpp */; };
+		FC8958C80EE30A0200C2FAB4 /* paWavFun.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958960EE30A0200C2FAB4 /* paWavFun.hpp */; };
+		FC8958C90EE30A0200C2FAB4 /* paWhiteFun.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958970EE30A0200C2FAB4 /* paWhiteFun.hpp */; };
+		FC8958CA0EE30A0200C2FAB4 /* paConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = FC89589A0EE30A0200C2FAB4 /* paConfig.h */; };
+		FC8958CB0EE30A0200C2FAB4 /* paCriticalSection.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89589B0EE30A0200C2FAB4 /* paCriticalSection.hpp */; };
+		FC8958CC0EE30A0200C2FAB4 /* paFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = FC89589C0EE30A0200C2FAB4 /* paFloat.h */; };
+		FC8958CD0EE30A0200C2FAB4 /* paMemory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89589D0EE30A0200C2FAB4 /* paMemory.hpp */; };
+		FC8958CE0EE30A0200C2FAB4 /* paRand.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89589E0EE30A0200C2FAB4 /* paRand.hpp */; };
+		FC8958CF0EE30A0200C2FAB4 /* paThread.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC89589F0EE30A0200C2FAB4 /* paThread.hpp */; };
+		FC8958D00EE30A0200C2FAB4 /* paGeomAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8958A30EE30A0200C2FAB4 /* paGeomAPI.h */; };
+		FC8958D10EE30A0200C2FAB4 /* paHandleManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958A40EE30A0200C2FAB4 /* paHandleManager.hpp */; };
+		FC8958D20EE30A0200C2FAB4 /* paHandleType.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958A50EE30A0200C2FAB4 /* paHandleType.hpp */; };
+		FC8958D30EE30A0200C2FAB4 /* paObjectList.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958A60EE30A0200C2FAB4 /* paObjectList.hpp */; };
+		FC8958D40EE30A0200C2FAB4 /* paObjectPool.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958A70EE30A0200C2FAB4 /* paObjectPool.hpp */; };
+		FC8958D50EE30A0200C2FAB4 /* paRnd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FC8958A80EE30A0200C2FAB4 /* paRnd.hpp */; };
+		FC8959080EE30A0A00C2FAB4 /* paBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958D80EE30A0A00C2FAB4 /* paBody.cpp */; };
+		FC8959090EE30A0A00C2FAB4 /* C_API.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958DA0EE30A0A00C2FAB4 /* C_API.cpp */; };
+		FC89590A0EE30A0A00C2FAB4 /* paClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958DB0EE30A0A00C2FAB4 /* paClasses.cpp */; };
+		FC89590B0EE30A0A00C2FAB4 /* paContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958DD0EE30A0A00C2FAB4 /* paContact.cpp */; };
+		FC89590C0EE30A0A00C2FAB4 /* paFunContactGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958DE0EE30A0A00C2FAB4 /* paFunContactGen.cpp */; };
+		FC89590D0EE30A0A00C2FAB4 /* paFunImpactGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E00EE30A0A00C2FAB4 /* paFunImpactGen.cpp */; };
+		FC89590E0EE30A0A00C2FAB4 /* paImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E10EE30A0A00C2FAB4 /* paImpact.cpp */; };
+		FC89590F0EE30A0A00C2FAB4 /* paImpactGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E20EE30A0A00C2FAB4 /* paImpactGen.cpp */; };
+		FC8959100EE30A0A00C2FAB4 /* paModalData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E40EE30A0A00C2FAB4 /* paModalData.cpp */; };
+		FC8959110EE30A0A00C2FAB4 /* paModalRes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E50EE30A0A00C2FAB4 /* paModalRes.cpp */; };
+		FC8959120EE30A0A00C2FAB4 /* paModalVars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E60EE30A0A00C2FAB4 /* paModalVars.cpp */; };
+		FC8959130EE30A0A00C2FAB4 /* paRes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E70EE30A0A00C2FAB4 /* paRes.cpp */; };
+		FC8959140EE30A0A00C2FAB4 /* paAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958E90EE30A0A00C2FAB4 /* paAudio.cpp */; };
+		FC8959150EE30A0A00C2FAB4 /* paFlags.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958EA0EE30A0A00C2FAB4 /* paFlags.cpp */; };
+		FC8959160EE30A0A00C2FAB4 /* paGenerate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958EB0EE30A0A00C2FAB4 /* paGenerate.cpp */; };
+		FC8959170EE30A0A00C2FAB4 /* paOutputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958EC0EE30A0A00C2FAB4 /* paOutputStream.cpp */; };
+		FC8959180EE30A0A00C2FAB4 /* paTerm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958ED0EE30A0A00C2FAB4 /* paTerm.cpp */; };
+		FC8959190EE30A0A00C2FAB4 /* paTick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958EE0EE30A0A00C2FAB4 /* paTick.cpp */; };
+		FC89591A0EE30A0A00C2FAB4 /* paBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F00EE30A0A00C2FAB4 /* paBlock.cpp */; };
+		FC89591B0EE30A0A00C2FAB4 /* paLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F10EE30A0A00C2FAB4 /* paLimiter.cpp */; };
+		FC89591C0EE30A0A00C2FAB4 /* paLowpass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F20EE30A0A00C2FAB4 /* paLowpass.cpp */; };
+		FC89591D0EE30A0A00C2FAB4 /* paMeasureGain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F30EE30A0A00C2FAB4 /* paMeasureGain.cpp */; };
+		FC89591E0EE30A0A00C2FAB4 /* paTriPulser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F40EE30A0A00C2FAB4 /* paTriPulser.cpp */; };
+		FC89591F0EE30A0A00C2FAB4 /* paFunSurface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F60EE30A0A00C2FAB4 /* paFunSurface.cpp */; };
+		FC8959200EE30A0A00C2FAB4 /* paGridFun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F70EE30A0A00C2FAB4 /* paGridFun.cpp */; };
+		FC8959210EE30A0A00C2FAB4 /* paRndFun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F80EE30A0A00C2FAB4 /* paRndFun.cpp */; };
+		FC8959220EE30A0A00C2FAB4 /* paSurface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958F90EE30A0A00C2FAB4 /* paSurface.cpp */; };
+		FC8959230EE30A0A00C2FAB4 /* paUserFun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958FA0EE30A0A00C2FAB4 /* paUserFun.cpp */; };
+		FC8959240EE30A0A00C2FAB4 /* paWavFun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958FB0EE30A0A00C2FAB4 /* paWavFun.cpp */; };
+		FC8959250EE30A0A00C2FAB4 /* paWhiteFun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958FC0EE30A0A00C2FAB4 /* paWhiteFun.cpp */; };
+		FC8959260EE30A0A00C2FAB4 /* paCriticalSection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958FE0EE30A0A00C2FAB4 /* paCriticalSection.cpp */; };
+		FC8959270EE30A0A00C2FAB4 /* paMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8958FF0EE30A0A00C2FAB4 /* paMemory.cpp */; };
+		FC8959280EE30A0A00C2FAB4 /* paRand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8959000EE30A0A00C2FAB4 /* paRand.cpp */; };
+		FC8959290EE30A0A00C2FAB4 /* paThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8959010EE30A0A00C2FAB4 /* paThread.cpp */; };
+		FC89592A0EE30A0A00C2FAB4 /* paGeom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8959040EE30A0A00C2FAB4 /* paGeom.cpp */; };
+		FC89592B0EE30A0A00C2FAB4 /* paHandleManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8959050EE30A0A00C2FAB4 /* paHandleManager.cpp */; };
+		FC89592C0EE30A0A00C2FAB4 /* paPointerList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8959060EE30A0A00C2FAB4 /* paPointerList.cpp */; };
+		FC89592D0EE30A0A00C2FAB4 /* paRnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC8959070EE30A0A00C2FAB4 /* paRnd.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC046055464E500DB518D /* libphya.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libphya.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC89586F0EE30A0200C2FAB4 /* paBody.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paBody.hpp; sourceTree = "<group>"; };
+		FC8958710EE30A0200C2FAB4 /* paContact.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paContact.hpp; sourceTree = "<group>"; };
+		FC8958720EE30A0200C2FAB4 /* paContactDynamicDataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paContactDynamicDataAPI.h; sourceTree = "<group>"; };
+		FC8958730EE30A0200C2FAB4 /* paContactGen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paContactGen.hpp; sourceTree = "<group>"; };
+		FC8958740EE30A0200C2FAB4 /* paFunContactGen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paFunContactGen.hpp; sourceTree = "<group>"; };
+		FC8958770EE30A0200C2FAB4 /* paFunImpactGen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paFunImpactGen.hpp; sourceTree = "<group>"; };
+		FC8958780EE30A0200C2FAB4 /* paImpact.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paImpact.hpp; sourceTree = "<group>"; };
+		FC8958790EE30A0200C2FAB4 /* paImpactDynamicDataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paImpactDynamicDataAPI.h; sourceTree = "<group>"; };
+		FC89587A0EE30A0200C2FAB4 /* paImpactGen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paImpactGen.hpp; sourceTree = "<group>"; };
+		FC89587B0EE30A0200C2FAB4 /* Phya.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Phya.hpp; sourceTree = "<group>"; };
+		FC89587E0EE30A0200C2FAB4 /* paModal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paModal.hpp; sourceTree = "<group>"; };
+		FC89587F0EE30A0200C2FAB4 /* paModalData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paModalData.hpp; sourceTree = "<group>"; };
+		FC8958800EE30A0200C2FAB4 /* paModalRes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paModalRes.hpp; sourceTree = "<group>"; };
+		FC8958810EE30A0200C2FAB4 /* paModalVars.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paModalVars.hpp; sourceTree = "<group>"; };
+		FC8958820EE30A0200C2FAB4 /* paRes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paRes.hpp; sourceTree = "<group>"; };
+		FC8958840EE30A0200C2FAB4 /* paAudio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paAudio.hpp; sourceTree = "<group>"; };
+		FC8958850EE30A0200C2FAB4 /* paFlags.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paFlags.hpp; sourceTree = "<group>"; };
+		FC8958860EE30A0200C2FAB4 /* paLockCheck.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paLockCheck.hpp; sourceTree = "<group>"; };
+		FC8958870EE30A0200C2FAB4 /* paSceneAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paSceneAPI.h; sourceTree = "<group>"; };
+		FC8958880EE30A0200C2FAB4 /* paTick.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paTick.hpp; sourceTree = "<group>"; };
+		FC89588A0EE30A0200C2FAB4 /* paBlock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paBlock.hpp; sourceTree = "<group>"; };
+		FC89588B0EE30A0200C2FAB4 /* paLimiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paLimiter.hpp; sourceTree = "<group>"; };
+		FC89588C0EE30A0200C2FAB4 /* paLowpass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paLowpass.hpp; sourceTree = "<group>"; };
+		FC89588D0EE30A0200C2FAB4 /* paMeasureGain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paMeasureGain.hpp; sourceTree = "<group>"; };
+		FC89588E0EE30A0200C2FAB4 /* paTriPulser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paTriPulser.hpp; sourceTree = "<group>"; };
+		FC8958900EE30A0200C2FAB4 /* paFun.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paFun.hpp; sourceTree = "<group>"; };
+		FC8958910EE30A0200C2FAB4 /* paFunSurface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paFunSurface.hpp; sourceTree = "<group>"; };
+		FC8958920EE30A0200C2FAB4 /* paGridFun.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paGridFun.hpp; sourceTree = "<group>"; };
+		FC8958930EE30A0200C2FAB4 /* paRndFun.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paRndFun.hpp; sourceTree = "<group>"; };
+		FC8958940EE30A0200C2FAB4 /* paSurface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paSurface.hpp; sourceTree = "<group>"; };
+		FC8958950EE30A0200C2FAB4 /* paUserFun.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paUserFun.hpp; sourceTree = "<group>"; };
+		FC8958960EE30A0200C2FAB4 /* paWavFun.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paWavFun.hpp; sourceTree = "<group>"; };
+		FC8958970EE30A0200C2FAB4 /* paWhiteFun.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paWhiteFun.hpp; sourceTree = "<group>"; };
+		FC89589A0EE30A0200C2FAB4 /* paConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paConfig.h; sourceTree = "<group>"; };
+		FC89589B0EE30A0200C2FAB4 /* paCriticalSection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paCriticalSection.hpp; sourceTree = "<group>"; };
+		FC89589C0EE30A0200C2FAB4 /* paFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paFloat.h; sourceTree = "<group>"; };
+		FC89589D0EE30A0200C2FAB4 /* paMemory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paMemory.hpp; sourceTree = "<group>"; };
+		FC89589E0EE30A0200C2FAB4 /* paRand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paRand.hpp; sourceTree = "<group>"; };
+		FC89589F0EE30A0200C2FAB4 /* paThread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paThread.hpp; sourceTree = "<group>"; };
+		FC8958A30EE30A0200C2FAB4 /* paGeomAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paGeomAPI.h; sourceTree = "<group>"; };
+		FC8958A40EE30A0200C2FAB4 /* paHandleManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paHandleManager.hpp; sourceTree = "<group>"; };
+		FC8958A50EE30A0200C2FAB4 /* paHandleType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paHandleType.hpp; sourceTree = "<group>"; };
+		FC8958A60EE30A0200C2FAB4 /* paObjectList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paObjectList.hpp; sourceTree = "<group>"; };
+		FC8958A70EE30A0200C2FAB4 /* paObjectPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paObjectPool.hpp; sourceTree = "<group>"; };
+		FC8958A80EE30A0200C2FAB4 /* paRnd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = paRnd.hpp; sourceTree = "<group>"; };
+		FC8958D80EE30A0A00C2FAB4 /* paBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paBody.cpp; sourceTree = "<group>"; };
+		FC8958DA0EE30A0A00C2FAB4 /* C_API.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = C_API.cpp; sourceTree = "<group>"; };
+		FC8958DB0EE30A0A00C2FAB4 /* paClasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paClasses.cpp; sourceTree = "<group>"; };
+		FC8958DD0EE30A0A00C2FAB4 /* paContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paContact.cpp; sourceTree = "<group>"; };
+		FC8958DE0EE30A0A00C2FAB4 /* paFunContactGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paFunContactGen.cpp; sourceTree = "<group>"; };
+		FC8958E00EE30A0A00C2FAB4 /* paFunImpactGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paFunImpactGen.cpp; sourceTree = "<group>"; };
+		FC8958E10EE30A0A00C2FAB4 /* paImpact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paImpact.cpp; sourceTree = "<group>"; };
+		FC8958E20EE30A0A00C2FAB4 /* paImpactGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paImpactGen.cpp; sourceTree = "<group>"; };
+		FC8958E40EE30A0A00C2FAB4 /* paModalData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paModalData.cpp; sourceTree = "<group>"; };
+		FC8958E50EE30A0A00C2FAB4 /* paModalRes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paModalRes.cpp; sourceTree = "<group>"; };
+		FC8958E60EE30A0A00C2FAB4 /* paModalVars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paModalVars.cpp; sourceTree = "<group>"; };
+		FC8958E70EE30A0A00C2FAB4 /* paRes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paRes.cpp; sourceTree = "<group>"; };
+		FC8958E90EE30A0A00C2FAB4 /* paAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paAudio.cpp; sourceTree = "<group>"; };
+		FC8958EA0EE30A0A00C2FAB4 /* paFlags.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paFlags.cpp; sourceTree = "<group>"; };
+		FC8958EB0EE30A0A00C2FAB4 /* paGenerate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paGenerate.cpp; sourceTree = "<group>"; };
+		FC8958EC0EE30A0A00C2FAB4 /* paOutputStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paOutputStream.cpp; sourceTree = "<group>"; };
+		FC8958ED0EE30A0A00C2FAB4 /* paTerm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paTerm.cpp; sourceTree = "<group>"; };
+		FC8958EE0EE30A0A00C2FAB4 /* paTick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paTick.cpp; sourceTree = "<group>"; };
+		FC8958F00EE30A0A00C2FAB4 /* paBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paBlock.cpp; sourceTree = "<group>"; };
+		FC8958F10EE30A0A00C2FAB4 /* paLimiter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paLimiter.cpp; sourceTree = "<group>"; };
+		FC8958F20EE30A0A00C2FAB4 /* paLowpass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paLowpass.cpp; sourceTree = "<group>"; };
+		FC8958F30EE30A0A00C2FAB4 /* paMeasureGain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paMeasureGain.cpp; sourceTree = "<group>"; };
+		FC8958F40EE30A0A00C2FAB4 /* paTriPulser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paTriPulser.cpp; sourceTree = "<group>"; };
+		FC8958F60EE30A0A00C2FAB4 /* paFunSurface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paFunSurface.cpp; sourceTree = "<group>"; };
+		FC8958F70EE30A0A00C2FAB4 /* paGridFun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paGridFun.cpp; sourceTree = "<group>"; };
+		FC8958F80EE30A0A00C2FAB4 /* paRndFun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paRndFun.cpp; sourceTree = "<group>"; };
+		FC8958F90EE30A0A00C2FAB4 /* paSurface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paSurface.cpp; sourceTree = "<group>"; };
+		FC8958FA0EE30A0A00C2FAB4 /* paUserFun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paUserFun.cpp; sourceTree = "<group>"; };
+		FC8958FB0EE30A0A00C2FAB4 /* paWavFun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paWavFun.cpp; sourceTree = "<group>"; };
+		FC8958FC0EE30A0A00C2FAB4 /* paWhiteFun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paWhiteFun.cpp; sourceTree = "<group>"; };
+		FC8958FE0EE30A0A00C2FAB4 /* paCriticalSection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paCriticalSection.cpp; sourceTree = "<group>"; };
+		FC8958FF0EE30A0A00C2FAB4 /* paMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paMemory.cpp; sourceTree = "<group>"; };
+		FC8959000EE30A0A00C2FAB4 /* paRand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paRand.cpp; sourceTree = "<group>"; };
+		FC8959010EE30A0A00C2FAB4 /* paThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paThread.cpp; sourceTree = "<group>"; };
+		FC8959040EE30A0A00C2FAB4 /* paGeom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paGeom.cpp; sourceTree = "<group>"; };
+		FC8959050EE30A0A00C2FAB4 /* paHandleManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paHandleManager.cpp; sourceTree = "<group>"; };
+		FC8959060EE30A0A00C2FAB4 /* paPointerList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paPointerList.cpp; sourceTree = "<group>"; };
+		FC8959070EE30A0A00C2FAB4 /* paRnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paRnd.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* phya */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = phya;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958D60EE30A0A00C2FAB4 /* src */,
+				FC89586D0EE30A0200C2FAB4 /* include */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* libphya.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		FC89586D0EE30A0200C2FAB4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FC89586E0EE30A0200C2FAB4 /* Body */,
+				FC8958700EE30A0200C2FAB4 /* Contact */,
+				FC8958750EE30A0200C2FAB4 /* Debug */,
+				FC8958760EE30A0200C2FAB4 /* Impact */,
+				FC89587B0EE30A0200C2FAB4 /* Phya.hpp */,
+				FC89587C0EE30A0200C2FAB4 /* Release */,
+				FC89587D0EE30A0200C2FAB4 /* Resonator */,
+				FC8958830EE30A0200C2FAB4 /* Scene */,
+				FC8958890EE30A0200C2FAB4 /* Signal */,
+				FC89588F0EE30A0200C2FAB4 /* Surface */,
+				FC8958980EE30A0200C2FAB4 /* System */,
+				FC8958A10EE30A0200C2FAB4 /* Utility */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = SOURCE_ROOT;
+		};
+		FC89586E0EE30A0200C2FAB4 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				FC89586F0EE30A0200C2FAB4 /* paBody.hpp */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		FC8958700EE30A0200C2FAB4 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958710EE30A0200C2FAB4 /* paContact.hpp */,
+				FC8958720EE30A0200C2FAB4 /* paContactDynamicDataAPI.h */,
+				FC8958730EE30A0200C2FAB4 /* paContactGen.hpp */,
+				FC8958740EE30A0200C2FAB4 /* paFunContactGen.hpp */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		FC8958750EE30A0200C2FAB4 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		FC8958760EE30A0200C2FAB4 /* Impact */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958770EE30A0200C2FAB4 /* paFunImpactGen.hpp */,
+				FC8958780EE30A0200C2FAB4 /* paImpact.hpp */,
+				FC8958790EE30A0200C2FAB4 /* paImpactDynamicDataAPI.h */,
+				FC89587A0EE30A0200C2FAB4 /* paImpactGen.hpp */,
+			);
+			path = Impact;
+			sourceTree = "<group>";
+		};
+		FC89587C0EE30A0200C2FAB4 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		FC89587D0EE30A0200C2FAB4 /* Resonator */ = {
+			isa = PBXGroup;
+			children = (
+				FC89587E0EE30A0200C2FAB4 /* paModal.hpp */,
+				FC89587F0EE30A0200C2FAB4 /* paModalData.hpp */,
+				FC8958800EE30A0200C2FAB4 /* paModalRes.hpp */,
+				FC8958810EE30A0200C2FAB4 /* paModalVars.hpp */,
+				FC8958820EE30A0200C2FAB4 /* paRes.hpp */,
+			);
+			path = Resonator;
+			sourceTree = "<group>";
+		};
+		FC8958830EE30A0200C2FAB4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958840EE30A0200C2FAB4 /* paAudio.hpp */,
+				FC8958850EE30A0200C2FAB4 /* paFlags.hpp */,
+				FC8958860EE30A0200C2FAB4 /* paLockCheck.hpp */,
+				FC8958870EE30A0200C2FAB4 /* paSceneAPI.h */,
+				FC8958880EE30A0200C2FAB4 /* paTick.hpp */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		FC8958890EE30A0200C2FAB4 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+				FC89588A0EE30A0200C2FAB4 /* paBlock.hpp */,
+				FC89588B0EE30A0200C2FAB4 /* paLimiter.hpp */,
+				FC89588C0EE30A0200C2FAB4 /* paLowpass.hpp */,
+				FC89588D0EE30A0200C2FAB4 /* paMeasureGain.hpp */,
+				FC89588E0EE30A0200C2FAB4 /* paTriPulser.hpp */,
+			);
+			path = Signal;
+			sourceTree = "<group>";
+		};
+		FC89588F0EE30A0200C2FAB4 /* Surface */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958900EE30A0200C2FAB4 /* paFun.hpp */,
+				FC8958910EE30A0200C2FAB4 /* paFunSurface.hpp */,
+				FC8958920EE30A0200C2FAB4 /* paGridFun.hpp */,
+				FC8958930EE30A0200C2FAB4 /* paRndFun.hpp */,
+				FC8958940EE30A0200C2FAB4 /* paSurface.hpp */,
+				FC8958950EE30A0200C2FAB4 /* paUserFun.hpp */,
+				FC8958960EE30A0200C2FAB4 /* paWavFun.hpp */,
+				FC8958970EE30A0200C2FAB4 /* paWhiteFun.hpp */,
+			);
+			path = Surface;
+			sourceTree = "<group>";
+		};
+		FC8958980EE30A0200C2FAB4 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958990EE30A0200C2FAB4 /* Debug */,
+				FC89589A0EE30A0200C2FAB4 /* paConfig.h */,
+				FC89589B0EE30A0200C2FAB4 /* paCriticalSection.hpp */,
+				FC89589C0EE30A0200C2FAB4 /* paFloat.h */,
+				FC89589D0EE30A0200C2FAB4 /* paMemory.hpp */,
+				FC89589E0EE30A0200C2FAB4 /* paRand.hpp */,
+				FC89589F0EE30A0200C2FAB4 /* paThread.hpp */,
+				FC8958A00EE30A0200C2FAB4 /* Release */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		FC8958990EE30A0200C2FAB4 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		FC8958A00EE30A0200C2FAB4 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		FC8958A10EE30A0200C2FAB4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958A20EE30A0200C2FAB4 /* Debug */,
+				FC8958A30EE30A0200C2FAB4 /* paGeomAPI.h */,
+				FC8958A40EE30A0200C2FAB4 /* paHandleManager.hpp */,
+				FC8958A50EE30A0200C2FAB4 /* paHandleType.hpp */,
+				FC8958A60EE30A0200C2FAB4 /* paObjectList.hpp */,
+				FC8958A70EE30A0200C2FAB4 /* paObjectPool.hpp */,
+				FC8958A80EE30A0200C2FAB4 /* paRnd.hpp */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FC8958A20EE30A0200C2FAB4 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		FC8958D60EE30A0A00C2FAB4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958D70EE30A0A00C2FAB4 /* Body */,
+				FC8958D90EE30A0A00C2FAB4 /* C_API */,
+				FC8958DC0EE30A0A00C2FAB4 /* Contact */,
+				FC8958DF0EE30A0A00C2FAB4 /* Impact */,
+				FC8958E30EE30A0A00C2FAB4 /* Resonator */,
+				FC8958E80EE30A0A00C2FAB4 /* Scene */,
+				FC8958EF0EE30A0A00C2FAB4 /* Signal */,
+				FC8958F50EE30A0A00C2FAB4 /* Surface */,
+				FC8958FD0EE30A0A00C2FAB4 /* System */,
+				FC8959020EE30A0A00C2FAB4 /* Utility */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = SOURCE_ROOT;
+		};
+		FC8958D70EE30A0A00C2FAB4 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958D80EE30A0A00C2FAB4 /* paBody.cpp */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		FC8958D90EE30A0A00C2FAB4 /* C_API */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958DA0EE30A0A00C2FAB4 /* C_API.cpp */,
+				FC8958DB0EE30A0A00C2FAB4 /* paClasses.cpp */,
+			);
+			path = C_API;
+			sourceTree = "<group>";
+		};
+		FC8958DC0EE30A0A00C2FAB4 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958DD0EE30A0A00C2FAB4 /* paContact.cpp */,
+				FC8958DE0EE30A0A00C2FAB4 /* paFunContactGen.cpp */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		FC8958DF0EE30A0A00C2FAB4 /* Impact */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958E00EE30A0A00C2FAB4 /* paFunImpactGen.cpp */,
+				FC8958E10EE30A0A00C2FAB4 /* paImpact.cpp */,
+				FC8958E20EE30A0A00C2FAB4 /* paImpactGen.cpp */,
+			);
+			path = Impact;
+			sourceTree = "<group>";
+		};
+		FC8958E30EE30A0A00C2FAB4 /* Resonator */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958E40EE30A0A00C2FAB4 /* paModalData.cpp */,
+				FC8958E50EE30A0A00C2FAB4 /* paModalRes.cpp */,
+				FC8958E60EE30A0A00C2FAB4 /* paModalVars.cpp */,
+				FC8958E70EE30A0A00C2FAB4 /* paRes.cpp */,
+			);
+			path = Resonator;
+			sourceTree = "<group>";
+		};
+		FC8958E80EE30A0A00C2FAB4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958E90EE30A0A00C2FAB4 /* paAudio.cpp */,
+				FC8958EA0EE30A0A00C2FAB4 /* paFlags.cpp */,
+				FC8958EB0EE30A0A00C2FAB4 /* paGenerate.cpp */,
+				FC8958EC0EE30A0A00C2FAB4 /* paOutputStream.cpp */,
+				FC8958ED0EE30A0A00C2FAB4 /* paTerm.cpp */,
+				FC8958EE0EE30A0A00C2FAB4 /* paTick.cpp */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		FC8958EF0EE30A0A00C2FAB4 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958F00EE30A0A00C2FAB4 /* paBlock.cpp */,
+				FC8958F10EE30A0A00C2FAB4 /* paLimiter.cpp */,
+				FC8958F20EE30A0A00C2FAB4 /* paLowpass.cpp */,
+				FC8958F30EE30A0A00C2FAB4 /* paMeasureGain.cpp */,
+				FC8958F40EE30A0A00C2FAB4 /* paTriPulser.cpp */,
+			);
+			path = Signal;
+			sourceTree = "<group>";
+		};
+		FC8958F50EE30A0A00C2FAB4 /* Surface */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958F60EE30A0A00C2FAB4 /* paFunSurface.cpp */,
+				FC8958F70EE30A0A00C2FAB4 /* paGridFun.cpp */,
+				FC8958F80EE30A0A00C2FAB4 /* paRndFun.cpp */,
+				FC8958F90EE30A0A00C2FAB4 /* paSurface.cpp */,
+				FC8958FA0EE30A0A00C2FAB4 /* paUserFun.cpp */,
+				FC8958FB0EE30A0A00C2FAB4 /* paWavFun.cpp */,
+				FC8958FC0EE30A0A00C2FAB4 /* paWhiteFun.cpp */,
+			);
+			path = Surface;
+			sourceTree = "<group>";
+		};
+		FC8958FD0EE30A0A00C2FAB4 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				FC8958FE0EE30A0A00C2FAB4 /* paCriticalSection.cpp */,
+				FC8958FF0EE30A0A00C2FAB4 /* paMemory.cpp */,
+				FC8959000EE30A0A00C2FAB4 /* paRand.cpp */,
+				FC8959010EE30A0A00C2FAB4 /* paThread.cpp */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		FC8959020EE30A0A00C2FAB4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FC8959030EE30A0A00C2FAB4 /* Debug */,
+				FC8959040EE30A0A00C2FAB4 /* paGeom.cpp */,
+				FC8959050EE30A0A00C2FAB4 /* paHandleManager.cpp */,
+				FC8959060EE30A0A00C2FAB4 /* paPointerList.cpp */,
+				FC8959070EE30A0A00C2FAB4 /* paRnd.cpp */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FC8959030EE30A0A00C2FAB4 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8958A90EE30A0200C2FAB4 /* paBody.hpp in Headers */,
+				FC8958AA0EE30A0200C2FAB4 /* paContact.hpp in Headers */,
+				FC8958AB0EE30A0200C2FAB4 /* paContactDynamicDataAPI.h in Headers */,
+				FC8958AC0EE30A0200C2FAB4 /* paContactGen.hpp in Headers */,
+				FC8958AD0EE30A0200C2FAB4 /* paFunContactGen.hpp in Headers */,
+				FC8958AE0EE30A0200C2FAB4 /* paFunImpactGen.hpp in Headers */,
+				FC8958AF0EE30A0200C2FAB4 /* paImpact.hpp in Headers */,
+				FC8958B00EE30A0200C2FAB4 /* paImpactDynamicDataAPI.h in Headers */,
+				FC8958B10EE30A0200C2FAB4 /* paImpactGen.hpp in Headers */,
+				FC8958B20EE30A0200C2FAB4 /* Phya.hpp in Headers */,
+				FC8958B30EE30A0200C2FAB4 /* paModal.hpp in Headers */,
+				FC8958B40EE30A0200C2FAB4 /* paModalData.hpp in Headers */,
+				FC8958B50EE30A0200C2FAB4 /* paModalRes.hpp in Headers */,
+				FC8958B60EE30A0200C2FAB4 /* paModalVars.hpp in Headers */,
+				FC8958B70EE30A0200C2FAB4 /* paRes.hpp in Headers */,
+				FC8958B80EE30A0200C2FAB4 /* paAudio.hpp in Headers */,
+				FC8958B90EE30A0200C2FAB4 /* paFlags.hpp in Headers */,
+				FC8958BA0EE30A0200C2FAB4 /* paLockCheck.hpp in Headers */,
+				FC8958BB0EE30A0200C2FAB4 /* paSceneAPI.h in Headers */,
+				FC8958BC0EE30A0200C2FAB4 /* paTick.hpp in Headers */,
+				FC8958BD0EE30A0200C2FAB4 /* paBlock.hpp in Headers */,
+				FC8958BE0EE30A0200C2FAB4 /* paLimiter.hpp in Headers */,
+				FC8958BF0EE30A0200C2FAB4 /* paLowpass.hpp in Headers */,
+				FC8958C00EE30A0200C2FAB4 /* paMeasureGain.hpp in Headers */,
+				FC8958C10EE30A0200C2FAB4 /* paTriPulser.hpp in Headers */,
+				FC8958C20EE30A0200C2FAB4 /* paFun.hpp in Headers */,
+				FC8958C30EE30A0200C2FAB4 /* paFunSurface.hpp in Headers */,
+				FC8958C40EE30A0200C2FAB4 /* paGridFun.hpp in Headers */,
+				FC8958C50EE30A0200C2FAB4 /* paRndFun.hpp in Headers */,
+				FC8958C60EE30A0200C2FAB4 /* paSurface.hpp in Headers */,
+				FC8958C70EE30A0200C2FAB4 /* paUserFun.hpp in Headers */,
+				FC8958C80EE30A0200C2FAB4 /* paWavFun.hpp in Headers */,
+				FC8958C90EE30A0200C2FAB4 /* paWhiteFun.hpp in Headers */,
+				FC8958CA0EE30A0200C2FAB4 /* paConfig.h in Headers */,
+				FC8958CB0EE30A0200C2FAB4 /* paCriticalSection.hpp in Headers */,
+				FC8958CC0EE30A0200C2FAB4 /* paFloat.h in Headers */,
+				FC8958CD0EE30A0200C2FAB4 /* paMemory.hpp in Headers */,
+				FC8958CE0EE30A0200C2FAB4 /* paRand.hpp in Headers */,
+				FC8958CF0EE30A0200C2FAB4 /* paThread.hpp in Headers */,
+				FC8958D00EE30A0200C2FAB4 /* paGeomAPI.h in Headers */,
+				FC8958D10EE30A0200C2FAB4 /* paHandleManager.hpp in Headers */,
+				FC8958D20EE30A0200C2FAB4 /* paHandleType.hpp in Headers */,
+				FC8958D30EE30A0200C2FAB4 /* paObjectList.hpp in Headers */,
+				FC8958D40EE30A0200C2FAB4 /* paObjectPool.hpp in Headers */,
+				FC8958D50EE30A0200C2FAB4 /* paRnd.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* phya */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "phya" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = phya;
+			productName = phya;
+			productReference = D2AAC046055464E500DB518D /* libphya.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "phya" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* phya */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* phya */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8959080EE30A0A00C2FAB4 /* paBody.cpp in Sources */,
+				FC8959090EE30A0A00C2FAB4 /* C_API.cpp in Sources */,
+				FC89590A0EE30A0A00C2FAB4 /* paClasses.cpp in Sources */,
+				FC89590B0EE30A0A00C2FAB4 /* paContact.cpp in Sources */,
+				FC89590C0EE30A0A00C2FAB4 /* paFunContactGen.cpp in Sources */,
+				FC89590D0EE30A0A00C2FAB4 /* paFunImpactGen.cpp in Sources */,
+				FC89590E0EE30A0A00C2FAB4 /* paImpact.cpp in Sources */,
+				FC89590F0EE30A0A00C2FAB4 /* paImpactGen.cpp in Sources */,
+				FC8959100EE30A0A00C2FAB4 /* paModalData.cpp in Sources */,
+				FC8959110EE30A0A00C2FAB4 /* paModalRes.cpp in Sources */,
+				FC8959120EE30A0A00C2FAB4 /* paModalVars.cpp in Sources */,
+				FC8959130EE30A0A00C2FAB4 /* paRes.cpp in Sources */,
+				FC8959140EE30A0A00C2FAB4 /* paAudio.cpp in Sources */,
+				FC8959150EE30A0A00C2FAB4 /* paFlags.cpp in Sources */,
+				FC8959160EE30A0A00C2FAB4 /* paGenerate.cpp in Sources */,
+				FC8959170EE30A0A00C2FAB4 /* paOutputStream.cpp in Sources */,
+				FC8959180EE30A0A00C2FAB4 /* paTerm.cpp in Sources */,
+				FC8959190EE30A0A00C2FAB4 /* paTick.cpp in Sources */,
+				FC89591A0EE30A0A00C2FAB4 /* paBlock.cpp in Sources */,
+				FC89591B0EE30A0A00C2FAB4 /* paLimiter.cpp in Sources */,
+				FC89591C0EE30A0A00C2FAB4 /* paLowpass.cpp in Sources */,
+				FC89591D0EE30A0A00C2FAB4 /* paMeasureGain.cpp in Sources */,
+				FC89591E0EE30A0A00C2FAB4 /* paTriPulser.cpp in Sources */,
+				FC89591F0EE30A0A00C2FAB4 /* paFunSurface.cpp in Sources */,
+				FC8959200EE30A0A00C2FAB4 /* paGridFun.cpp in Sources */,
+				FC8959210EE30A0A00C2FAB4 /* paRndFun.cpp in Sources */,
+				FC8959220EE30A0A00C2FAB4 /* paSurface.cpp in Sources */,
+				FC8959230EE30A0A00C2FAB4 /* paUserFun.cpp in Sources */,
+				FC8959240EE30A0A00C2FAB4 /* paWavFun.cpp in Sources */,
+				FC8959250EE30A0A00C2FAB4 /* paWhiteFun.cpp in Sources */,
+				FC8959260EE30A0A00C2FAB4 /* paCriticalSection.cpp in Sources */,
+				FC8959270EE30A0A00C2FAB4 /* paMemory.cpp in Sources */,
+				FC8959280EE30A0A00C2FAB4 /* paRand.cpp in Sources */,
+				FC8959290EE30A0A00C2FAB4 /* paThread.cpp in Sources */,
+				FC89592A0EE30A0A00C2FAB4 /* paGeom.cpp in Sources */,
+				FC89592B0EE30A0A00C2FAB4 /* paHandleManager.cpp in Sources */,
+				FC89592C0EE30A0A00C2FAB4 /* paPointerList.cpp in Sources */,
+				FC89592D0EE30A0A00C2FAB4 /* paRnd.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = phya;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = phya;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../include;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../include;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "phya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "phya" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
