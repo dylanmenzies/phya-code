@@ -45,7 +45,7 @@
 
 //#include "ADBwriteToFile.hpp"
 
-char s0[] = "MODAN modal analyser, (C) 2001-2009 Dylan Menzies.";
+char s0[] = "MODAN modal analyser, (C) 2001-2012 Dylan Menzies.";
 
 
 
