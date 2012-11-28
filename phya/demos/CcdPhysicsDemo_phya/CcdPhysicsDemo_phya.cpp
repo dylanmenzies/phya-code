@@ -16,7 +16,7 @@ subject to the following restrictions:
 /*
 CcdPhysicsDemo_phya
 Incorporating Phya integration code.
-(c) Dylan Menzies 2001-2009   www.zenprobe.com/phya
+(c) Dylan Menzies 2001-2012
 */
 
 
