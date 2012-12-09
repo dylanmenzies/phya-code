@@ -1,3 +1,0 @@
-//
-// paCriticalSection.cpp
-//
