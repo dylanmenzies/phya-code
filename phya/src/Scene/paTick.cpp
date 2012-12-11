@@ -167,7 +167,7 @@ paTick()
 					if (gen1->isActive()) {
 						gen1->setOutput(surfaceOutput);
 						gen1->tick();
-						if (ac->m_fadeAndDelete  || gen2->isQuiet())
+						if (ac->m_fadeAndDelete  || gen1->isQuiet())
 						{
 							surfaceOutput->fadeout();
 							gen1->setInactive();
