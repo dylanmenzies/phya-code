@@ -73,16 +73,16 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RagdollDemo</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RagdollDemo_phya</TargetName>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\x64\Release\App_GenericJointDemo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">App_GenericJointDemo_vs2010_x64_release</TargetName>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RagdollDemo_dbg</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RagdollDemo_phya_dbg</TargetName>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\x64\Debug\App_GenericJointDemo\</IntDir>
@@ -113,7 +113,7 @@
       <AdditionalIncludeDirectories>..\..\src;..\..\Demos\OpenGL;..\..\Glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>dsound.lib;winmm.lib;user32.lib;..\..\extern\Bullet\lib\OpenGLSupport_vs2010.lib;..\..\extern\Bullet\lib\BulletDynamics_vs2010.lib;..\..\extern\Bullet\lib\BulletCollision_vs2010.lib;..\..\extern\Bullet\lib\LinearMath_vs2010.lib</AdditionalDependencies>
+      <AdditionalDependencies>glut32.lib;dsound.lib;winmm.lib;user32.lib;..\..\AIO\lib\AIO.lib;..\..\lib\Phya.lib;..\..\extern\Bullet\lib\OpenGLSupport_vs2010_debug.lib;..\..\extern\Bullet\lib\BulletDynamics_vs2010_debug.lib;..\..\extern\Bullet\lib\BulletCollision_vs2010_debug.lib;..\..\extern\Bullet\lib\LinearMath_vs2010_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\bin\RagdollDemo_phya.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\extern\bullet\Glut;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
@@ -183,7 +183,7 @@
       <AdditionalIncludeDirectories>..\..\src;..\..\Demos\OpenGL;..\..\Glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>opengl32.lib;glut32.lib;..\..\lib\OpenGLSupport_vs2010_debug.lib;..\..\lib\BulletDynamics_vs2010_debug.lib;..\..\lib\BulletCollision_vs2010_debug.lib;..\..\lib\LinearMath_vs2010_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glut32.lib;dsound.lib;winmm.lib;user32.lib;..\..\AIO\lib\AIOdbg.lib;..\..\lib\PhyaDbg.lib;..\..\extern\Bullet\lib\OpenGLSupport_vs2010_debug.lib;..\..\extern\Bullet\lib\BulletDynamics_vs2010_debug.lib;..\..\extern\Bullet\lib\BulletCollision_vs2010_debug.lib;..\..\extern\Bullet\lib\LinearMath_vs2010_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\bin\RagdollDemo_phya_dbg.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\extern\bullet\Glut;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
