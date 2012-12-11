@@ -56,7 +56,7 @@ void GenericJointDemo::initPhysics()
 
 	m_dynamicsWorld->setDebugDrawer(&debugDrawer);
 
-	m_dynamicsWorld->getSolverInfo().m_restingContactRestitutionThreshold = 0.f; //   m_singleAxisRollingFrictionThreshold = 0.f;//faster but lower quality
+	//m_dynamicsWorld->getSolverInfo().m_restingContactRestitutionThreshold = 0.f; //   m_singleAxisRollingFrictionThreshold = 0.f;//faster but lower quality
 
 	// Setup a big ground box
 	{
@@ -68,7 +68,7 @@ void GenericJointDemo::initPhysics()
 	}
 
 	Swing* swing1 = new Swing( m_dynamicsWorld, btVector3(0,9,0), 4.0f, m_ground );
-	Swing* swing2 = new Swing( m_dynamicsWorld, btVector3(10,9,0), 4.0f, m_ground );
+	Swing* swing2 = new Swing( m_dynamicsWorld, btVector3(4,9,0), 4.0f, m_ground );
 
 	clientResetScene();
 }

@@ -18,8 +18,6 @@ Swing::Swing( btDynamicsWorld* ownerWorld,
 	m_body = localCreateRigidBody( btScalar(1.0), offset * transform, m_shape );
 	
 
-
-
 	m_joint = new btPoint2PointConstraint(*m_body, *ground, 
 		btVector3(btScalar(0.), btScalar(0.5 * scale_swing), btScalar(0.)),
 		jointPosition
@@ -35,10 +33,10 @@ Swing::Swing( btDynamicsWorld* ownerWorld,
 	//localB.setOrigin(jointPosition); //! hinge relative to ground
 	//m_joint = new btGeneric6DofConstraint(*m_body, *ground, localA, localB, useLinearReferenceFrameA);
 
-	m_body->setRestitution(0.0f);
+	m_body->setRestitution(2.0f);
 	m_body->setRollingFriction(0.0f);
 
-	m_body->setDamping( 0.00f, 0.00f );
+	m_body->setDamping( 0.1f, 0.1f );
 	//m_body->setDeactivationTime( 0.0f );
 	m_body->setSleepingThresholds( 0.0f, 0.0f );
 	//m_body->setDamping( 0.05f, 0.85f );
