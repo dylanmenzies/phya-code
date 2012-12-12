@@ -2,17 +2,19 @@
 
 Specific issues:
 
--Rationalize the gain / limiter paths to be easy to set up.
+- Don't create audio contacts between bodies with no audio bodies linked.
+
+- Rationalize the gain / limiter paths to be easy to set up.
 Should be an overall contact gain control post force limiting.
 Rename ampMax Min to Force Max Min? mmmm
 
 
--Rationalize surface contact classes to incorporate.
+- Rationalize surface contact classes to incorporate.
 
 
--Integrate with true persistence of multiple contacts.
+- Integrate with true persistence of multiple contacts.
 
--Switch off either contacts or impacts completely.
+- Switch off either contacts or impacts completely.
 
 
 
