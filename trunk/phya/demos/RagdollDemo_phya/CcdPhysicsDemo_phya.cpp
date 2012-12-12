@@ -95,8 +95,8 @@ int CcdPhysicsDemo::PhyaUpdateCollisions()
 				{
 					ac->setBody1((paBody*)obA->getUserPointer());	// body->abody, set up in initPhysics.
 					ac->setBody2((paBody*)obB->getUserPointer());
-					ac->setUserData((void *)(&pt));					// contact<->acontact cross ref.
-					pt.m_userPersistentData = (void *)ac;		
+					ac->setUserData((void *)(&pt));					// audio contact -> physical contact
+					pt.m_userPersistentData = (void *)ac;			// physical contact -> audio contact
 				}
 				firstContact = true;	// Indicates should test for impact below..
 			}
@@ -485,7 +485,7 @@ void	CcdPhysicsDemo::initAudio()
 	m_funsurf->setContactAmpMax(200.0);
 	m_funsurf->setContactDamping(1.0f);	//1.1						// Factor damping is modified by when in contact.
 
-
+	
 	m_funsurf->setHardness(100.0f);							// Impulse time = 1/hardness (limited).
 	m_funsurf->setImpactAmpMax(1.0);
 	m_funsurf->setImpulseToHardnessBreakpoint(0.0);
@@ -516,7 +516,7 @@ void	CcdPhysicsDemo::initAudio()
 	m_modes = new paModalData;
 
 #ifndef IMPACTSAMPLE
-	if (m_modes->read("../resource/Pickbreak.md") == -1)
+	if (m_modes->read("../resource/bigtin.md") == -1)
 		m_modes->read("eg.md");	// Try local, eg for distrb exe.
 #endif
 
@@ -528,7 +528,7 @@ int i;
 	paFloat cutoff[NBODIES] = {100.0f, 300.0f, 400.0f, 500.0f, 1000.0f, 1000.0f, 10000.0f, 10000.0f, 10000.0f, 10000.0f};
 #endif
 
-	for(i=1; i< NBODIES; i++) {
+	for(i=0; i< NBODIES; i++) {
 		paModalRes *mr = m_res[i] = new paModalRes;
 		mr->setData(m_modes);
 		mr->setQuietLevel(1.0f);		// Determines at what rms envelope level a resonator will be 
@@ -538,7 +538,9 @@ int i;
 		//mr->setnActiveModes(50);		// Can trade detail for speed.
 		mr->setAuxAmpScale(2.0f);
 		mr->setAuxDampScale(.5f);
-
+#ifndef IMPACTSAMPLE
+		mr->setAuxFreqScale(0.2f + 0.2f*i);		// Give a different base frequency to each object.
+#endif
 		mr->setMaxContactDamping(3.0);
 		m_abody[i] = new paBody;
 
@@ -547,7 +549,7 @@ int i;
 #endif
 
 		m_funsurfn[i] = new paFunSurface;
-		*m_funsurfn[i] = *m_funsurf;		// Copy template.
+		*m_funsurfn[i] = *m_funsurf;	// Copy template.
 		m_funsurfn[i]->setCutoffFreqMax(cutoff[i]);
 		m_abody[i]->setSurface(m_funsurfn[i]);
 	}
@@ -585,6 +587,9 @@ void	CcdPhysicsDemo::startAudio()
 #endif
 }
 
+
+
+
 void	CcdPhysicsDemo::initPhysics()
 {
 
@@ -600,51 +605,37 @@ else
 	m_debugMode |= btIDebugDraw::DBG_NoHelpText;
 #endif
 
-m_collisionShapes.push_back(new btBoxShape (btVector3(200,CUBE_HALF_EXTENTS,200)));
-
+	m_collisionShapes.push_back(new btBoxShape (btVector3(200,CUBE_HALF_EXTENTS,200)));
 //#define CUBE_HALF_EXTENTS 1.5
-#ifdef DO_BENCHMARK_PYRAMIDS
-#else
-#ifdef DISK
 	m_collisionShapes.push_back(new btCylinderShape (btVector3(2.0*CUBE_HALF_EXTENTS,0.2*CUBE_HALF_EXTENTS,CUBE_HALF_EXTENTS)));	// overlapping disks
-#elif defined CAN
-#endif
-#endif
 
-	m_dispatcher=0;
 	m_collisionConfiguration = new btDefaultCollisionConfiguration();
-	
-#ifdef USE_PARALLEL_DISPATCHER
-#else
-	
 	m_dispatcher = new	btCollisionDispatcher(m_collisionConfiguration);
-#endif //USE_PARALLEL_DISPATCHER
 
 	btVector3 worldAabbMin(-1000,-1000,-1000);
 	btVector3 worldAabbMax(1000,1000,1000);
 
 	m_broadphase = new btAxisSweep3(worldAabbMin,worldAabbMax,maxProxies);
-#ifdef COMPARE_WITH_QUICKSTEP
-#else
 
-	
-#ifdef USE_PARALLEL_SOLVER
-#else
 	btSequentialImpulseConstraintSolver* solver = new btSequentialImpulseConstraintSolver();
-
 	m_solver = solver;
-#endif //USE_PARALLEL_SOLVER
 
-#endif
+	btDiscreteDynamicsWorld* world = new btDiscreteDynamicsWorld(m_dispatcher,m_broadphase,m_solver,m_collisionConfiguration);
+	m_dynamicsWorld = world;
 
-		btDiscreteDynamicsWorld* world = new btDiscreteDynamicsWorld(m_dispatcher,m_broadphase,m_solver,m_collisionConfiguration);
-		m_dynamicsWorld = world;
-
-		m_dynamicsWorld->getDispatchInfo().m_enableSPU = true;
-		m_dynamicsWorld->setGravity(btVector3(0,-10,0));
+	m_dynamicsWorld->getDispatchInfo().m_enableSPU = true;
+	m_dynamicsWorld->setGravity(btVector3(0,-10,0));
 
 	btTransform tr;
 	tr.setIdentity();
+
+
+	// Setup manifold point callbacks.
+#ifndef MANIFOLDCOLLISON 
+		gContactDestroyedCallback = PhyaContactDestroyedCallback;
+#endif
+
+
 
 	int i;
 	
@@ -658,26 +649,8 @@ m_collisionShapes.push_back(new btBoxShape (btVector3(200,CUBE_HALF_EXTENTS,200)
 			shapeIndex[i] = 0;
 	}
 
-	if (useCompound)
-	{
-		btCompoundShape* compoundShape = new btCompoundShape();
-		btCollisionShape* oldShape = m_collisionShapes[1];
-		m_collisionShapes[1] = compoundShape;
-		btVector3 sphereOffset(0,0,2);
 
-		comOffset.setIdentity();
 
-#ifdef CENTER_OF_MASS_SHIFT
-#else
-		compoundShape->addChildShape(tr,oldShape);
-		tr.setOrigin(sphereOffset);
-		compoundShape->addChildShape(tr,new btSphereShape(0.9));
-#endif
-	}
-
-#ifdef DO_WALL
-
-	doll = new RagDoll(m_dynamicsWorld, btVector3(0,2,15), 7.5f, m_abody );
 
 	for (i=0;i<gNumObjects;i++)
 	{
@@ -720,26 +693,26 @@ m_collisionShapes.push_back(new btBoxShape (btVector3(200,CUBE_HALF_EXTENTS,200)
 	
 		btRigidBody* body = localCreateRigidBody(mass,trans,shape);
 
+		//////////////////////////////////////////////////////////////////////////////////////////////////////
 		//Phya    
 		// Point to Phya body from Bullet body.
-		//if (i > 1) body->setUserPointer((void*)(m_abody[i]));
+//		if (i > 1) body->setUserPointer((void*)(m_abody[i]));
+		if (i == 0) body->setUserPointer((void*)0);		// ground
 
-		// Setup manifold point callbacks.
-//		gContactAddedCallback = PhyaContactAddedCallback;		// Not working correctly.
-#ifndef MANIFOLDCOLLISON 
-		gContactDestroyedCallback = PhyaContactDestroyedCallback;
-#endif
+
 		body->setCollisionFlags(body->getCollisionFlags()  | btCollisionObject::CF_CUSTOM_MATERIAL_CALLBACK);
-
-#ifdef USE_KINEMATIC_GROUND
-#endif //USE_KINEMATIC_GROUND
 		
 		// Only do CCD if  motion in one timestep (1.f/60.f) exceeds CUBE_HALF_EXTENTS
 		body->setCcdMotionThreshold( CUBE_HALF_EXTENTS );
 		//Experimental: better estimation of CCD Time of Impact:
 		body->setCcdSweptSphereRadius( 0.2*CUBE_HALF_EXTENTS );
 	}
-#endif
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Setup ragdoll
+	doll = new RagDoll(m_dynamicsWorld, btVector3(0,2,15), 7.5f, m_abody );
+
 }
 	
 void	CcdPhysicsDemo::exitPhysics()

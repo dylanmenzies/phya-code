@@ -113,7 +113,7 @@
       <AdditionalIncludeDirectories>..\..\src;..\..\Demos\OpenGL;..\..\Glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>glut32.lib;dsound.lib;winmm.lib;user32.lib;..\..\AIO\lib\AIO.lib;..\..\lib\Phya.lib;..\..\extern\Bullet\lib\OpenGLSupport_vs2010_debug.lib;..\..\extern\Bullet\lib\BulletDynamics_vs2010_debug.lib;..\..\extern\Bullet\lib\BulletCollision_vs2010_debug.lib;..\..\extern\Bullet\lib\LinearMath_vs2010_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glut32.lib;dsound.lib;winmm.lib;user32.lib;..\..\AIO\lib\AIO.lib;..\..\lib\Phya.lib;..\..\extern\Bullet\lib\OpenGLSupport_vs2010.lib;..\..\extern\Bullet\lib\BulletDynamics_vs2010.lib;..\..\extern\Bullet\lib\BulletCollision_vs2010.lib;..\..\extern\Bullet\lib\LinearMath_vs2010.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\bin\RagdollDemo_phya.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\extern\bullet\Glut;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>

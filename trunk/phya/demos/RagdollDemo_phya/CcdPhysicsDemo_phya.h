@@ -34,7 +34,7 @@ subject to the following restrictions:
 #ifdef MANIFOLDCOLLISION
 #define NBODIES 2
 #else
-#define NBODIES 10  //2 10
+#define NBODIES 11  // ragdoll parts
 #endif
 
 class btBroadphaseInterface;

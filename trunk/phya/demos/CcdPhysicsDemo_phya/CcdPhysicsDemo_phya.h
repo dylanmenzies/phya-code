@@ -112,7 +112,7 @@ class CcdPhysicsDemo : public PlatformDemoApplication
 		CcdPhysicsDemo* demo = new CcdPhysicsDemo;
 		demo->myinit();
 		demo->initAudio();
-		demo->initPhysics();
+		demo->initPhysics(); // Setup Bullet physics and pointers to Phya bodies
 		return demo;
 	}
 
