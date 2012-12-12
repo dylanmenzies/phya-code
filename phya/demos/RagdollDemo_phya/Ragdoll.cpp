@@ -48,7 +48,7 @@ RagDoll::RagDoll (btDynamicsWorld* ownerWorld, const btVector3& positionOffset,
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(0.), btScalar(scale_ragdoll*1.), btScalar(0.)));
 	m_bodies[BODYPART_PELVIS] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_PELVIS]);
-	//m_bodies[BODYPART_PELVIS]->setUserPointer((void*)(m_abody[BODYPART_PELVIS]));
+	m_bodies[BODYPART_PELVIS]->setUserPointer((void*)(m_abody[BODYPART_PELVIS]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(0.), btScalar(scale_ragdoll*1.2), btScalar(0.)));
@@ -58,52 +58,50 @@ RagDoll::RagDoll (btDynamicsWorld* ownerWorld, const btVector3& positionOffset,
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(0.), btScalar(scale_ragdoll*1.6), btScalar(0.)));
 	m_bodies[BODYPART_HEAD] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_HEAD]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
 
 	transform.setIdentity();
-	transform.setOrigin(btVector3(btScalar(-0.18*scale_ragdoll), btScalar(0.65*scale_ragdoll),
-btScalar(0.)));
+	transform.setOrigin(btVector3(btScalar(-0.18*scale_ragdoll), btScalar(0.65*scale_ragdoll), btScalar(0.)));
 	m_bodies[BODYPART_LEFT_UPPER_LEG] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_LEFT_UPPER_LEG]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_LEFT_UPPER_LEG]->setUserPointer((void*)(m_abody[BODYPART_LEFT_UPPER_LEG]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(-0.18*scale_ragdoll), btScalar(0.2*scale_ragdoll), btScalar(0.)));
 	m_bodies[BODYPART_LEFT_LOWER_LEG] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_LEFT_LOWER_LEG]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_LEFT_LOWER_LEG]->setUserPointer((void*)(m_abody[BODYPART_LEFT_LOWER_LEG]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(0.18*scale_ragdoll), btScalar(0.65*scale_ragdoll), btScalar(0.)));
 	m_bodies[BODYPART_RIGHT_UPPER_LEG] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_RIGHT_UPPER_LEG]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_RIGHT_UPPER_LEG]->setUserPointer((void*)(m_abody[BODYPART_RIGHT_UPPER_LEG]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(0.18*scale_ragdoll), btScalar(0.2*scale_ragdoll), btScalar(0.)));
-	m_bodies[BODYPART_RIGHT_LOWER_LEG] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_RIGHT_LOWER_LEG]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_RIGHT_LOWER_LEG] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_RIGHT_LOWER_LEG]);	m_bodies[BODYPART_RIGHT_LOWER_LEG]->setUserPointer((void*)(m_abody[BODYPART_RIGHT_LOWER_LEG]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(-0.35*scale_ragdoll), btScalar(1.45*scale_ragdoll), btScalar(0.)));
 	transform.getBasis().setEulerZYX(0,0,SIMD_HALF_PI);
 	m_bodies[BODYPART_LEFT_UPPER_ARM] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_LEFT_UPPER_ARM]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_LEFT_UPPER_ARM]->setUserPointer((void*)(m_abody[BODYPART_LEFT_UPPER_ARM]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(-0.7*scale_ragdoll), btScalar(1.45*scale_ragdoll), btScalar(0.)));
 	transform.getBasis().setEulerZYX(0,0,SIMD_HALF_PI);
 	m_bodies[BODYPART_LEFT_LOWER_ARM] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_LEFT_LOWER_ARM]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_LEFT_LOWER_ARM]->setUserPointer((void*)(m_abody[BODYPART_LEFT_LOWER_ARM]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(0.35*scale_ragdoll), btScalar(1.45*scale_ragdoll), btScalar(0.)));
 	transform.getBasis().setEulerZYX(0,0,-SIMD_HALF_PI);
 	m_bodies[BODYPART_RIGHT_UPPER_ARM] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_RIGHT_UPPER_ARM]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_RIGHT_UPPER_ARM]->setUserPointer((void*)(m_abody[BODYPART_RIGHT_UPPER_ARM]));
 
 	transform.setIdentity();
 	transform.setOrigin(btVector3(btScalar(0.7*scale_ragdoll), btScalar(1.45*scale_ragdoll), btScalar(0.)));
 	transform.getBasis().setEulerZYX(0,0,-SIMD_HALF_PI);
 	m_bodies[BODYPART_RIGHT_LOWER_ARM] = localCreateRigidBody(btScalar(1.), offset*transform, m_shapes[BODYPART_RIGHT_LOWER_ARM]);
-	//m_bodies[BODYPART_HEAD]->setUserPointer((void*)(m_abody[BODYPART_HEAD]));
+	m_bodies[BODYPART_RIGHT_LOWER_ARM]->setUserPointer((void*)(m_abody[BODYPART_RIGHT_LOWER_ARM]));
 
 	// Setup some damping on the m_bodies
 	for (int i = 0; i < BODYPART_COUNT; ++i)

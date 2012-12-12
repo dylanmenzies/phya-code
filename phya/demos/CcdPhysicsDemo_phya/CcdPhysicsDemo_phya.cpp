@@ -96,11 +96,6 @@ const int maxProxies = 32766;
 const int maxOverlap = 65535;
 
 bool createConstraint = true;//false;
-#ifdef CENTER_OF_MASS_SHIFT
-bool useCompound = true;
-#else
-bool useCompound = false;
-#endif
 
 
 
@@ -1318,6 +1313,7 @@ void	CcdPhysicsDemo::startAudio()
 
 void	CcdPhysicsDemo::initPhysics()
 {
+// Setup Bullet physics and pointers to Phya bodies
 
 #ifdef _RELEASE
 #endif
@@ -1365,13 +1361,6 @@ else
 	
 
 
-#ifdef DO_BENCHMARK_PYRAMIDS
-	setCameraDistance(32.5f);
-#endif
-
-#ifdef DO_BENCHMARK_PYRAMIDS
-	m_azi = 90.f;
-#endif //DO_BENCHMARK_PYRAMIDS
 
 	m_dispatcher=0;
 	m_collisionConfiguration = new btDefaultCollisionConfiguration();
@@ -1459,7 +1448,6 @@ int maxNumOutstandingTasks = 4;
 	//solver->setSolverMode(0);//btSequentialImpulseConstraintSolver::SOLVER_USE_WARMSTARTING | btSequentialImpulseConstraintSolver::SOLVER_RANDMIZE_ORDER);
 	
 #endif //USE_PARALLEL_SOLVER
-
 #endif
 		
 #ifdef	USER_DEFINED_FRICTION_MODEL
@@ -1470,9 +1458,6 @@ int maxNumOutstandingTasks = 4;
 		btDiscreteDynamicsWorld* world = new btDiscreteDynamicsWorld(m_dispatcher,m_broadphase,m_solver,m_collisionConfiguration);
 		m_dynamicsWorld = world;
 
-#ifdef DO_BENCHMARK_PYRAMIDS
-		world->getSolverInfo().m_numIterations = 4;
-#endif //DO_BENCHMARK_PYRAMIDS
 
 		m_dynamicsWorld->getDispatchInfo().m_enableSPU = true;
 		m_dynamicsWorld->setGravity(btVector3(0,-10,0));
@@ -1500,33 +1485,13 @@ int maxNumOutstandingTasks = 4;
 	{
 		if (i>0)
 		{
-			shapeIndex[i] = 1;//sphere
+			shapeIndex[i] = 1;
 		}
 		else
 			shapeIndex[i] = 0;
 	}
 
-	if (useCompound)
-	{
-		btCompoundShape* compoundShape = new btCompoundShape();
-		btCollisionShape* oldShape = m_collisionShapes[1];
-		m_collisionShapes[1] = compoundShape;
-		btVector3 sphereOffset(0,0,2);
 
-		comOffset.setIdentity();
-
-#ifdef CENTER_OF_MASS_SHIFT
-		comOffset.setOrigin(comOffsetVec);
-		compoundShape->addChildShape(comOffset,oldShape);
-
-#else
-		compoundShape->addChildShape(tr,oldShape);
-		tr.setOrigin(sphereOffset);
-		compoundShape->addChildShape(tr,new btSphereShape(0.9));
-#endif
-	}
-
-#ifdef DO_WALL
 
 	for (i=0;i<gNumObjects;i++)
 	{
@@ -1540,22 +1505,8 @@ int maxNumOutstandingTasks = 4;
 		
 		if (i>0)
 		{
-			//stack them
-			int colsize = 10;
-			int row = (i*CUBE_HALF_EXTENTS*2)/(colsize*2*CUBE_HALF_EXTENTS);
-			int row2 = row;
-			int col = (i)%(colsize)-colsize/2;
-
-
-			if (col>3)
-			{
-				col=11;
-				row2 |=1;
-			}
-
-			btVector3 pos(col*2*CUBE_HALF_EXTENTS + (row2%2)*CUBE_HALF_EXTENTS,
-				row*2*CUBE_HALF_EXTENTS+CUBE_HALF_EXTENTS+EXTRA_HEIGHT,5);
-
+			int col = i-gNumObjects/2;
+			btVector3 pos(col*2*CUBE_HALF_EXTENTS, CUBE_HALF_EXTENTS + EXTRA_HEIGHT,5);
 			trans.setOrigin(pos);
 		} else
 		{
@@ -1569,16 +1520,20 @@ int maxNumOutstandingTasks = 4;
 	
 		btRigidBody* body = localCreateRigidBody(mass,trans,shape);
 
-		//Phya    
+		///////////////////////////////////////////////////////////////////////////////
+		//     
 		// Point to Phya body from Bullet body.
 		if (i > 0) body->setUserPointer((void*)(m_abody[i]));
+		if (i == 0) body->setUserPointer((void*)0);
+
 
 		// Setup manifold point callbacks.
 //		gContactAddedCallback = PhyaContactAddedCallback;		// Not working correctly.
 #ifndef MANIFOLDCOLLISON 
 		gContactDestroyedCallback = PhyaContactDestroyedCallback;
 #endif
-		body->setCollisionFlags(body->getCollisionFlags()  | btCollisionObject::CF_CUSTOM_MATERIAL_CALLBACK);
+
+//		body->setCollisionFlags(body->getCollisionFlags()  | btCollisionObject::CF_CUSTOM_MATERIAL_CALLBACK);
 
 #ifdef USE_KINEMATIC_GROUND
 		if (mass == 0.f)
@@ -1600,45 +1555,8 @@ int maxNumOutstandingTasks = 4;
 #endif //USER_DEFINED_FRICTION_MODEL
 
 	}
-#endif
 
 
-#ifdef DO_BENCHMARK_PYRAMIDS
-	btTransform trans;
-	trans.setIdentity();
-	
-	btScalar halfExtents = CUBE_HALF_EXTENTS;
-
-	trans.setOrigin(btVector3(0,-halfExtents,0));
-
-
-
-	localCreateRigidBody(0.f,trans,m_collisionShapes[shapeIndex[0]]);
-
-	int numWalls = 15;
-	int wallHeight = 15;
-	float wallDistance = 3;
-
-
-	for (int i=0;i<numWalls;i++)
-	{
-		float zPos = (i-numWalls/2) * wallDistance;
-		createStack(m_collisionShapes[shapeIndex[1]],halfExtents,wallHeight,zPos);
-	}
-//	createStack(m_collisionShapes[shapeIndex[1]],halfExtends,20,10);
-
-//	createStack(m_collisionShapes[shapeIndex[1]],halfExtends,20,20);
-#define DESTROYER_BALL 1
-#ifdef DESTROYER_BALL
-	btTransform sphereTrans;
-	sphereTrans.setIdentity();
-	sphereTrans.setOrigin(btVector3(0,2,40));
-	btSphereShape* ball = new btSphereShape(2.f);
-	m_collisionShapes.push_back(ball);
-	btRigidBody* ballBody = localCreateRigidBody(10000.f,sphereTrans,ball);
-	ballBody->setLinearVelocity(btVector3(0,0,-10));
-#endif 
-#endif //DO_BENCHMARK_PYRAMIDS
 //	clientResetScene();
 
 
