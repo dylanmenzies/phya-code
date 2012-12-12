@@ -33,10 +33,10 @@ Swing::Swing( btDynamicsWorld* ownerWorld,
 	//localB.setOrigin(jointPosition); //! hinge relative to ground
 	//m_joint = new btGeneric6DofConstraint(*m_body, *ground, localA, localB, useLinearReferenceFrameA);
 
-	m_body->setRestitution(2.0f);
-	m_body->setRollingFriction(0.0f);
+//	m_body->setRestitution(2.0f);
+//	m_body->setRollingFriction(0.0f);
 
-	m_body->setDamping( 0.1f, 0.1f );
+	m_body->setDamping( 0.1f, 0.7f );
 	//m_body->setDeactivationTime( 0.0f );
 	m_body->setSleepingThresholds( 0.0f, 0.0f );
 	//m_body->setDamping( 0.05f, 0.85f );
