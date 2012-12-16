@@ -8,6 +8,7 @@ Specific issues:
 Should be an overall contact gain control post force limiting.
 Rename ampMax Min to Force Max Min? mmmm
 
+- Improve limiter / compressor
 
 - Rationalize surface contact classes to incorporate.
 
