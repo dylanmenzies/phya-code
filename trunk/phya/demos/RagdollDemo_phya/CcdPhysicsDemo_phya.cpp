@@ -528,7 +528,7 @@ int i;
 	paFloat cutoff[NBODIES] = {100.0f, 300.0f, 400.0f, 500.0f, 1000.0f, 1000.0f, 10000.0f, 10000.0f, 10000.0f, 10000.0f};
 #endif
 
-	for(i=1; i< NBODIES; i++) {
+	for(i=0; i< NBODIES; i++) {
 		paModalRes *mr = m_res[i] = new paModalRes;
 		mr->setData(m_modes);
 		mr->setQuietLevel(1.0f);		// Determines at what rms envelope level a resonator will be 

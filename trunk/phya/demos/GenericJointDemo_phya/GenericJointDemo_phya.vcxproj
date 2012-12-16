@@ -217,13 +217,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GenericJointDemo_phya.cpp" />
+    <ClCompile Include="GenericJointDemo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="swing.cpp" />
     <ClCompile Include="Win32GenericJointDemo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GenericJointDemo_phya.h" />
+    <ClInclude Include="GenericJointDemo.h" />
     <ClInclude Include="swing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
