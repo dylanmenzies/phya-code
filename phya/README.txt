@@ -1,8 +1,8 @@
 
 
 
-Phya v1.0.0 Summary
--------------------
+Phya Summary
+------------
 
 (c) Dylan Menzies, 2001-2012.   
 
@@ -15,7 +15,7 @@ The contents of the Bullet distribution should be copied to /extern/bullet
 Contents
 --------
 
-Phya.sln			msvs 2010 Express workspace
+Phya.sln			Visual Studio 2010 Express workspace
 /src				Phya library
 /doc				Documentation..
 /build				for Phya msvs and xcode.
