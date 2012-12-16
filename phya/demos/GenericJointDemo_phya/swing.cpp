@@ -36,16 +36,16 @@ Swing::Swing( btDynamicsWorld* ownerWorld,
 //	m_body->setRestitution(2.0f);
 //	m_body->setRollingFriction(0.0f);
 
-	m_body->setDamping( 0.1f, 0.7f );
+	//m_body->setDamping( 0.1f, 0.7f );
 	//m_body->setDeactivationTime( 0.0f );
 	m_body->setSleepingThresholds( 0.0f, 0.0f );
-	//m_body->setDamping( 0.05f, 0.85f );
-	//m_body->setDeactivationTime( 0.8f );
+	m_body->setDamping( 0.05f, 0.85f );
+	m_body->setDeactivationTime( 0.8f );
 	//m_body->setSleepingThresholds( 1.6f, 2.5f );
 	m_body->setActivationState(DISABLE_DEACTIVATION);
-	ground->setActivationState(DISABLE_DEACTIVATION);
-	ground->setRestitution(0.0f);
-	ground->setRollingFriction(0.0f);
+	//ground->setActivationState(DISABLE_DEACTIVATION);
+	//ground->setRestitution(0.0f);
+	//ground->setRollingFriction(0.0f);
 
 	
 #ifdef RIGID
