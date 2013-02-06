@@ -33,17 +33,17 @@ int main(int argc,char** argv)
 {
 	CcdPhysicsDemo* ccdDemo = new CcdPhysicsDemo();
 
-	ccdDemo->initAudio();					//Phya
+	ccdDemo->initAudio();					// Describe audio objects.
 
-	ccdDemo->initPhysics();					//Phya  Also makes body -> audio body links.
-	ccdDemo->setCameraDistance(4.0);		//Overide default renderer setting.
+	ccdDemo->initPhysics();					// Also makes body -> audio body links.
+	ccdDemo->setCameraDistance(4.0);		// Overide default renderer setting.
 	ccdDemo->getDynamicsWorld()->setDebugDrawer(&gDebugDrawer);
 
-	ccdDemo->startAudio();					//Phya Set audio device and start thread.
+	ccdDemo->startAudio();					// Set audio device and start thread.
 
 	glutmain(argc, argv,640,480,"Bullet Physics Demo. http://bullet.sf.net",ccdDemo);
 
-	ccdDemo->exitAudio();					//Phya  Kills audio thread nicely, if we get this far.
+	ccdDemo->exitAudio();					// Kills audio thread nicely, if we get this far.
 	delete ccdDemo;
 	return 0;
 
