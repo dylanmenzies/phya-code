@@ -992,6 +992,9 @@ float myFrictionModel(	btRigidBody& body1,	btRigidBody& body2,	btManifoldPoint& 
 // Pointers (body -> abody) are set in initPhysics
 void	CcdPhysicsDemo::initAudio()
 {
+
+	paSetnFramesPerSecond(44100);
+
 	m_funsurf = new paFunSurface;			// Function surface.. uses surface functions, combined with
 
 	//m_funsurf->setGainAtRoll(1.0f);						// Boost (or reduce) volume towards rolling.
@@ -1259,7 +1262,6 @@ int i;
 //Phya 
 void	CcdPhysicsDemo::startAudio() 
 {
-	paSetnFramesPerSecond(44100);
 
 	//// Configure simple mono output stream.
 	paSetnStreamBufFrames(256); //256 2048			// Num of frames in single write to device.
