@@ -161,7 +161,7 @@ paFloat x = 0;
 int
 CcdPhysicsDemo::PhyaUpdateCollisions()
 {
-	// input : m_dispatcher, m_dt
+	//input : m_dispatcher, m_dt
 	int numManifolds = m_dispatcher->getNumManifolds();
 	int i;
 	for (i=0;i<numManifolds;i++)
